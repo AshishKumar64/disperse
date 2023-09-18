@@ -116,8 +116,8 @@ export default function Disperse() {
           <div className="errTxt">
             {amountError}
             {duplicateError?.length
-              ? duplicateError?.map((err) => (
-                  <div className="errTxt">{err}</div>
+              ? duplicateError?.map((err, idx) => (
+                  <div className="errTxt" key={idx}>{err}</div>
                 ))
               : null}
           </div>
